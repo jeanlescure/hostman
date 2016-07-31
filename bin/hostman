@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'hostman'
+
+x = Hostman::Executor.new  
+x.exec
