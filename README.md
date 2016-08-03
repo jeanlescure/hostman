@@ -2,7 +2,7 @@
 
 Hostman (host manager) is a stand-alone ruby gem that makes blocking and unblocking domains a breeze.
 
-
+![Demo gif](http://i.giphy.com/l0HlDHG0f1yBrfAsg.gif)
 
 ## Installation
 
