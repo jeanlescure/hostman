@@ -24,14 +24,14 @@ describe Hostman do
     result.must_equal ::Fixtures::HOSTS_CONTENT
   end
 
-  it "can block and unblock a domain" do
-    `hostman --block test.com --hosts-file ./test/fixtures/hosts2`
+  it "can block and unblock domains" do
+    `hostman --block test.com,test2.com --block test3.com --hosts-file ./test/fixtures/hosts2`
 
-    result = `hostman --block test2.com --hosts-file ./test/fixtures/hosts2 --output-hosts`.chop
-    result.must_equal "#{::Fixtures::HOSTS_CONTENT}\n127.0.0.1\ttest.com\n127.0.0.1\ttest2.com"
+    result = `hostman --block test4.com --hosts-file ./test/fixtures/hosts2 --output-hosts`.chop
+    result.must_equal "#{::Fixtures::HOSTS_CONTENT}\n127.0.0.1\ttest.com\n127.0.0.1\ttest2.com\n127.0.0.1\ttest3.com\n127.0.0.1\ttest4.com"
 
-    result = `hostman --unblock test.com --hosts-file ./test/fixtures/hosts2 --output-hosts`.chop
-    result.must_equal "#{::Fixtures::HOSTS_CONTENT}\n127.0.0.1\ttest2.com"
+    result = `hostman --unblock test.com,test2.com --unblock test3.com --hosts-file ./test/fixtures/hosts2 --output-hosts`.chop
+    result.must_equal "#{::Fixtures::HOSTS_CONTENT}\n127.0.0.1\ttest4.com"
   end
 
   it "will not block more than once" do
