@@ -6,7 +6,7 @@ Hostman (host manager) is a stand-alone ruby gem that makes blocking and unblock
 
 ## Installation
 
-Since this gem will edit the file `/etc/hosts`, in most day to day cases you'll need ti install it as root so it can be called using sudo.
+Since this gem will edit the file `/etc/hosts`, in most day to day cases you'll need to install it as root so it can be called using sudo.
 
 Install it using sudo:
 
@@ -16,7 +16,15 @@ Install it using sudo:
 
 ## Usage
 
-
+```
+usage: hostman [options]
+    -b, --block         a list of hostnames
+    -u, --unblock       a list of hostname
+    -f, --hosts-file    override hosts file path
+    -o, --output-hosts  output hosts file contents after execution
+    -h, --help          print this help message
+    --version           print the version
+```
 
 ## Development
 
