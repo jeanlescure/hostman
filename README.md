@@ -1,28 +1,22 @@
 # Hostman
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hostman`. To experiment with that code, run `bin/console` for an interactive prompt.
+Hostman (host manager) is a stand-alone ruby gem that makes blocking and unblocking domains a breeze.
 
-TODO: Delete this and the text above, and describe your gem
+
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Since this gem will edit the file `/etc/hosts`, in most day to day cases you'll need ti install it as root so it can be called using sudo.
 
-```ruby
-gem 'hostman'
-```
+Install it using sudo:
 
-And then execute:
+    $ sudo gem install hostman
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install hostman
+**NOTE:** You can use several workarounds to avoid having to sudo everytime you run this, if you do, it is under your own risk.
 
 ## Usage
 
-TODO: Write usage instructions here
+
 
 ## Development
 
@@ -32,7 +26,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hostman. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jeanlescure/hostman. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
